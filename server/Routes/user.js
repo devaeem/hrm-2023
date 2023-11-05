@@ -1,23 +1,25 @@
 const express = require("express");
 const router = express.Router();
+const {
+  createuser,
+  listuser,
+   readuser,
+   updateuser,
+   resetpassword,
+  // removeuser,
+} = require("../Controllers/usersControllers");
 
-
-router.get('/user', (req, res) => {
-    res.status(200).json({
-        message:"get all user"
-    })
-  })
-
-
-  router.post('/user', (req, res) => {
-
-  
-    const  data = req.body;
-    res.status(200).json({
-        message:"create user successfuly",
-        body:[data]
-    })
-  })
-
+// list users
+router.get("/users", listuser);
+// create users
+ router.post("/users", createuser);
+//  read users
+ router.get("/users/:id", readuser);
+//  edit users
+ router.put("/users/:id", updateuser);
+//  reset users
+ router.put("/resetpassword/:id", resetpassword);
+//  delete users
+// router.delete("/users/:id", removeuser);
 
 module.exports = router;

@@ -22,8 +22,9 @@ app.use(bodyParser.json({ limit: "20mb" }));
 
 connectDB();
 
-const users = require("./Routes/user")
+
 const position = require("./Routes/position")
+const users = require("./Routes/user")
 
 //api
 app.use('/api/',users)
