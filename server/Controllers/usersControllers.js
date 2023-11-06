@@ -115,3 +115,18 @@ exports.resetpassword = async (req, res) => {
     });
   }
 };
+
+exports.removeuser = async (req, res) => {
+  try {
+    const remove = await user.findByIdAndDelete({ _id: req.params.id })
+    res.status(200).json({
+      message: "Delete Users successfuly",
+      data: remove,
+    });
+  } catch (err) {
+    res.status(500).json({
+      message: "Server Delete Users Error!!!",
+      error: err,
+    });
+  }
+};

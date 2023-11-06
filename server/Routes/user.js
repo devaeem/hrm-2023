@@ -6,7 +6,7 @@ const {
    readuser,
    updateuser,
    resetpassword,
-  // removeuser,
+   removeuser,
 } = require("../Controllers/usersControllers");
 
 // list users
@@ -20,6 +20,6 @@ router.get("/users", listuser);
 //  reset users
  router.put("/resetpassword/:id", resetpassword);
 //  delete users
-// router.delete("/users/:id", removeuser);
+ router.delete("/users/:id", removeuser);
 
 module.exports = router;
