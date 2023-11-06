@@ -8,16 +8,17 @@ const {
   removeposition,
 } = require("../Controllers/positionControllers");
 
+const { auth } = require("../Middleware/auth")
 
 // list position
-router.get("/position", listposition);
+router.get("/position",auth, listposition);
 // create position
-router.post("/position", createposition);
+router.post("/position",auth, createposition);
 // read position
-router.get("/position/:id", readposition);
+router.get("/position/:id",auth, readposition);
 // edit position
-router.put("/position/:id", updateposition);
+router.put("/position/:id",auth, updateposition);
 // delete position
-router.delete("/position/:id", removeposition);
+router.delete("/position/:id",auth, removeposition);
 
 module.exports = router;

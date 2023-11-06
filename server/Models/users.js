@@ -33,6 +33,10 @@ const userSchema = new mongoose.Schema(
         type: ObjectId,
         ref: 'position'
     },
+    role: {
+      type: String,
+      default: "user",
+    },
 
     enabled: {
       type: Boolean,

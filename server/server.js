@@ -25,10 +25,12 @@ connectDB();
 
 const position = require("./Routes/position")
 const users = require("./Routes/user")
+const auth = require("./Routes/auth")
 
 //api
 app.use('/api/',users)
 app.use('/api/',position)
+app.use('/api/',auth)
 
 
 app.listen(port,()=>{
