@@ -1,6 +1,3 @@
-const { mongoose } = require("mongoose");
-const user = require("../Models/users");
-const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 exports.auth = (req, res, next) => {
   try {
