@@ -1,3 +1,3 @@
 export default function Home() {
-  return <>Hellp Hrm test push</>;
+  return <>Hellp Hrm test ทดสอบระบบด้วยการ push</>;
 }
