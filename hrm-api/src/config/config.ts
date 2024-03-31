@@ -5,6 +5,10 @@ dotenv.config({
 
 const config = {
   port: process.env.PORT || 3002,
+  api: {
+    prefix: "/api/",
+    version: "/v1",
+  },
 };
 
 export default config;
